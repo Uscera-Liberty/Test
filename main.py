@@ -4,11 +4,10 @@ encryptedMessage = ""
 list = "abcdefghijklmnoprstuvwxyz"
 for i in a :
     place = list.find(i)
-    newPlace = place + n
+    newPlace = (place + n + len(list)) % len(list)
 
     if i in list:
         encryptedMessage += list[newPlace]
-    else:
-        encryptedMessage += n
+
 
 print(encryptedMessage)
