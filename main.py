@@ -1,13 +1,13 @@
 n = int(input())
-a = str(input().split())
+messagetoencrypt = str(input().split())
 encryptedMessage = ""
-list = "abcdefghijklmnoprstuvwxyz"
-for i in a :
-    place = list.find(i)
-    newPlace = (place + n + len(list)) % len(list)
+LIST = "abcdefghijklmnoprstuvwxyz"
+for letter in messagetoencrypt:
+    place = LIST.find(letter)
+    newPlace = (place + n + len(LIST)) % len(LIST)
 
-    if i in list:
-        encryptedMessage += list[newPlace]
+    if letter in LIST:
+        encryptedMessage += LIST[newPlace]
 
 
 print(encryptedMessage)
