@@ -1,7 +1,14 @@
 n = int(input())
 a = str(input().split())
-list = "abcdefghijklmnop"
-for i in range(len(list)):
-    if n > -1:
-        print(list[i + n])
+encryptedMessage = ""
+list = "abcdefghijklmnoprstuvwxyz"
+for i in a :
+    place = list.find(i)
+    newPlace = place + n
 
+    if i in list:
+        encryptedMessage += list[newPlace]
+    else:
+        encryptedMessage += n
+
+print(encryptedMessage)
